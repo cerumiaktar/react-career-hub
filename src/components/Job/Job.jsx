@@ -1,4 +1,5 @@
-
+import { IoLocationOutline } from "react-icons/io5";
+import { CiDollar } from "react-icons/ci";
 
 const Job = ({ job }) => {
     const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary, job_description } = job;
@@ -11,6 +12,10 @@ const Job = ({ job }) => {
                 <div>
                     <button className="px-5 py-2 font-bold border rounded border-[#7E90FE] mr-4 text-[#6c7ffb]">{remote_or_onsite}</button>
                     <button className="px-5 py-2 font-bold border rounded border-[#7E90FE] text-[#6c7ffb]">{job_type}</button>
+                </div>
+                <div className="mt-4 flex items-center gap-5">
+                    <h2 className="flex"><IoLocationOutline className="text-2xl mr-2"/>{location}</h2>
+                    <h2 className="flex"><CiDollar className="text-2xl mr-2" />{salary}</h2>
                 </div>
                 <div className="card-actions">
                     <button className="btn btn-primary">View Details</button>
